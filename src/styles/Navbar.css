@@ -64,3 +64,82 @@
 .got-nav-links li a:hover::after {
   width: 100%;
 }
+
+/* Base Styles */
+.got-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: white;
+  position: relative;
+}
+
+.got-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.got-logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.got-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.got-nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Hamburger Icon Styles */
+.got-menu-icon {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+  .got-menu-icon {
+    display: flex;
+  }
+
+  .got-nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .got-nav-links.active {
+    display: flex; /* Show links when "active" class is added */
+  }
+
+  /* Optional: Fun "X" animation for hamburger */
+  .bar.open:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .bar.open:nth-child(2) { opacity: 0; }
+  .bar.open:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
