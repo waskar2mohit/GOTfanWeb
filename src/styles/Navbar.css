@@ -1,0 +1,66 @@
+.got-navbar {
+  background-color: #1b1b1b; /* Dark Charcoal */
+  border-bottom: 3px solid #7a3e1a; /* Bronze color */
+  font-family: 'Cinzel', serif; /* Medieval style font */
+  color: #d4af37; /* Gold */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 2rem;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.8);
+  min-height: 64px;
+}
+
+.got-logo-img {
+  height: 38px;
+  width: auto;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  border-radius: 6px;
+  border: 2px solid #333;
+  background: #181818;
+}
+
+.got-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.got-nav-links li a {
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  font-family: 'Cinzel', serif;
+  position: relative;
+}
+
+.got-nav-links li a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #d4af37;
+  cursor: pointer;
+}
+
+.got-nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #7a3e1a, #d4af37);
+  transition: width 220ms ease;
+}
+
+.got-nav-links li a:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,72 @@
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.character-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: saturate(0.85) contrast(1.05);
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.card-header {
+  padding: 10px 12px 8px 12px;
+  background: rgba(10,10,10,0.75);
+  color: #f1e5c0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.card-name {
+  margin: 0 0 6px 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+}
+
+.card-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.card-title {
+  border-right: 1px solid rgba(212, 175, 55, 0.35);
+  padding-right: 10px;
+}
+
+.card-house {
+  color: #d4af37;
+}
+
+.character-card:hover .card-image {
+  transform: scale(1.02);
+  transition: transform 220ms ease;
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.5);
+}
+
+

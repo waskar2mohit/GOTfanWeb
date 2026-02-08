@@ -1,0 +1,36 @@
+.bg-video {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-sound-button,
+.video-mute-toggle {
+  position: fixed;
+  top: 76px; /* just below fixed navbar */
+  right: 16px;
+  left: auto;
+  transform: none;
+  z-index: 15;
+  background: rgba(27, 27, 27, 0.8);
+  color: #d4af37;
+  border: 2px solid #7a3e1a;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.video-sound-button:hover,
+.video-mute-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  background: rgba(27, 27, 27, 0.9);
+}
